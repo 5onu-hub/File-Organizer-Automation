@@ -1,4 +1,4 @@
-#  File Organizer Automation Tool — Complete Remade Version 
+#  File Organizer Automation Tool
 
 A professional Python automation project that automatically monitors a folder and organizes files into categorized folders in real-time.
 
