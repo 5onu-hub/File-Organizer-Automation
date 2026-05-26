@@ -1,4 +1,4 @@
-#  File Organizer Automation Tool — Complete Remade Version 🚀
+#  File Organizer Automation Tool — Complete Remade Version 
 
 A professional Python automation project that automatically monitors a folder and organizes files into categorized folders in real-time.
 
@@ -81,9 +81,7 @@ import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-# ==========================================
-# LOGGING SETUP
-# ==========================================
+
 
 os.makedirs("logs", exist_ok=True)
 
@@ -93,18 +91,11 @@ logging.basicConfig(
     format="%(asctime)s - %(message)s"
 )
 
-# ==========================================
-# SOURCE FOLDER
-# ==========================================
 
 SOURCE_FOLDER = "monitored_folder"
 
 # Create source folder if not exists
 os.makedirs(SOURCE_FOLDER, exist_ok=True)
-
-# ==========================================
-# FILE TYPE MAPPINGS
-# ==========================================
 
 FILE_TYPES = {
 
@@ -148,9 +139,6 @@ FILE_TYPES = {
     ]
 }
 
-# ==========================================
-# CREATE DESTINATION FOLDERS
-# ==========================================
 
 BASE_FOLDER = "folders"
 
@@ -168,9 +156,6 @@ os.makedirs(
     exist_ok=True
 )
 
-# ==========================================
-# GENERATE UNIQUE FILE NAME
-# ==========================================
 
 def get_unique_filename(destination_path):
 
@@ -190,9 +175,6 @@ def get_unique_filename(destination_path):
 
         counter += 1
 
-# ==========================================
-# ORGANIZE FILE FUNCTION
-# ==========================================
 
 def organize_file(file_path):
 
@@ -282,9 +264,6 @@ def organize_file(file_path):
 
             logging.error(str(error))
 
-# ==========================================
-# WATCHDOG EVENT HANDLER
-# ==========================================
 
 class FileHandler(FileSystemEventHandler):
 
@@ -294,10 +273,6 @@ class FileHandler(FileSystemEventHandler):
         time.sleep(1)
 
         organize_file(event.src_path)
-
-# ==========================================
-# START MONITORING
-# ==========================================
 
 event_handler = FileHandler()
 
