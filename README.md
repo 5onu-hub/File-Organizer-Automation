@@ -426,6 +426,6 @@ You can add:
 * Problem Solving
 
 
-## 📸 Screenshot
+##  Screenshot
 
 ![Project Screenshot](screenshots/project.png)
